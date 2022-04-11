@@ -1,0 +1,27 @@
+.hero-btn{
+    margin-top: 1.5rem;
+    cursor: pointer;
+    @include flex(flex-start);
+    color: $white;
+    .circle{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $red;
+        @include flex(center);
+        @include breakpoint(640px){
+            width: 55px;
+            height: 55px;
+        }
+        i{
+            
+            margin-left: .2rem;
+        }
+    }
+    p{
+        font-size: 1rem;
+        margin-left: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+}

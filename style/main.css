@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: nudista-web, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fefefe;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+.span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fefefe;
+  line-height: 1.4;
+  font-size: 0.850rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.span::before {
+  content: '';
+  width: 2rem;
+  height: 2px;
+  margin: 0 0.75rem 0 0;
+  background: #AB2B30;
+}
+
+@media (min-width: 1024px) {
+  .span {
+    font-size: 0.9rem;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.hero-btn {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #fefefe;
+}
+
+.hero-btn .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #AB2B30;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .hero-btn .circle {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.hero-btn .circle i {
+  margin-left: .2rem;
+}
+
+.hero-btn p {
+  font-size: 1rem;
+  margin-left: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-text {
+  height: 100vh;
+  max-width: 49rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.hero-swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0C1017;
+  z-index: -1;
+}
+
+.hero-swiper .hero-bg-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 16, 23, 0.7)), to(rgba(12, 16, 23, 0.7))), url(/images/hero-1.jpg);
+  background: linear-gradient(rgba(12, 16, 23, 0.7), rgba(12, 16, 23, 0.7)), url(/images/hero-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-swiper .hero-bg-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 16, 23, 0.7)), to(rgba(12, 16, 23, 0.7))), url(/images/hero-2.jpg);
+  background: linear-gradient(rgba(12, 16, 23, 0.7), rgba(12, 16, 23, 0.7)), url(/images/hero-2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-swiper .hero-bg-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 16, 23, 0.7)), to(rgba(12, 16, 23, 0.7))), url(/images/hero-3.jpg);
+  background: linear-gradient(rgba(12, 16, 23, 0.7), rgba(12, 16, 23, 0.7)), url(/images/hero-3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-swiper .hero-bg-4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 16, 23, 0.7)), to(rgba(12, 16, 23, 0.7))), url(/images/hero-4.jpg);
+  background: linear-gradient(rgba(12, 16, 23, 0.7), rgba(12, 16, 23, 0.7)), url(/images/hero-4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-swiper .swiper-pagination {
+  right: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hero-swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 25px;
+  height: 3px;
+  border-radius: 0;
+  background-color: #fefefe;
+  margin: .4rem 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0.5;
+}
+
+.hero-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 40px;
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
