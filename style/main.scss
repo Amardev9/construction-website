@@ -2,7 +2,12 @@
 @import "./helpers/mixins";
 
 @import "./core/reset";
+@import "./core/typography";
+@import "./core/global";
 
 @import "./components/buttons";
+
+@import "./layout/navigation";
+
 
 @import "./pages/home";

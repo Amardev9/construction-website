@@ -2,26 +2,32 @@
     margin-top: 1.5rem;
     cursor: pointer;
     @include flex(flex-start);
-    color: $white;
     .circle{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: $red;
+        margin-right: 0.75rem;
         @include flex(center);
+        width: 50px;
+        height: 50px;
+        background-color: $red;
+        border-radius: 50%;
+        transition: all .3s ease-in;
         @include breakpoint(640px){
-            width: 55px;
-            height: 55px;
+            width: 70px;
+            height: 70px;
         }
         i{
-            
-            margin-left: .2rem;
+            color: $white;
+            font-size: 24px;
+            margin-left: 4px;
         }
     }
     p{
-        font-size: 1rem;
-        margin-left: 0.75rem;
         font-weight: 600;
+        font-size: 1.1rem;
         letter-spacing: 0.1em;
+        color: $white;
     }
+}
+
+.scale{
+    transform: scale(1.2);
 }

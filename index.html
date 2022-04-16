@@ -11,32 +11,64 @@
     <title>GM Construction</title>
 </head>
 <body>
+    <!-- ************************ -->
+    <!-- ====== NAVIGATION ====== -->
+    <!-- ************************ -->
+    <header class="header" >
+        <nav class="nav container ">
+            <h1 class="logo">GM</h1>
+            <div class="menu-open">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="navbar">
+                <li class="navbar-item"><a class="navbar-link active-link" href="#">HOME</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">SERVICES</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">PROJECTS</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">ABOUT</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="menu-mask"></div>
+    <div class="menu-overlay">
+        <div class="menu-close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul class="menu" >
+            <li class="menu-item active-item"><a class="menu-link" href="#">HOME</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">SERVICES</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">PROJECTS</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">ABOUT</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">CONTACT</a></li>
+        </ul>
+    </div>
     <!-- ****************** -->
     <!-- ====== HERO ====== -->
     <!-- ****************** -->
-    <section class="hero" >
-        <div class="container">
-            <div class="hero-text">
-                <span class="span" >GORDON MITCHELL CONTRACTORS</span>
-                <h1 class="title" >Building contractor & timber systems specialists</h1>
-                <div class="hero-btn">
-                    <div class="circle">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                    <p>WHO ARE WE</p>
+    <section class="home-hero" >
+        <div class="home-text">
+            <span class="heading">GORDON MITCHELL CONTRACTORS</span>
+            <h1 class="hero-title">BUILDING CONTRACTOR & TIMBER SYSTEMS SPECIALISTS</h1>
+            <div class="hero-btn">
+                <div class="circle">
+                    <i class="fa-solid fa-play"></i>
                 </div>
+                <p>WHO WE ARE</p>
             </div>
         </div>
         <div class="swiper hero-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide hero-bg-1" ></div>
-                <div class="swiper-slide hero-bg-2" ></div>
-                <div class="swiper-slide hero-bg-3" ></div>
-                <div class="swiper-slide hero-bg-4" ></div>
+                <div class="swiper-slide home-hero-1" ></div>
+                <div class="swiper-slide home-hero-2" ></div>
+                <div class="swiper-slide home-hero-3" ></div>
+                <div class="swiper-slide home-hero-4" ></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
+    <br><br><br><br><br><br><br><br><br><br>
     <!-- Script -->
     <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="/script/sliders.js" ></script>
