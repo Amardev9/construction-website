@@ -14,6 +14,12 @@ const videoContainer = document.querySelector('.video-container');
 const videoClose = document.querySelector('.video-close');
 
 const videoIframe = document.querySelector('.gm-video');
+const bodyTag = document.querySelector('.body')
+
+
+window.addEventListener('load', () => {
+    bodyTag.classList.remove('preload');
+})
 
 
 menuOpenBtn.addEventListener('click', () => {

@@ -6,3 +6,7 @@
     opacity: 1;
     visibility: visible;
 }
+
+.preload *{
+    transition: none !important;
+}

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -603,5 +602,10 @@ button {
 .show {
   opacity: 1;
   visibility: visible;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 /*# sourceMappingURL=main.css.map */
