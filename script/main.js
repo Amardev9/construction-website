@@ -1,48 +1,47 @@
-// ====== Navigation ====== //
-const navHeader = document.querySelector('.header');
 const menuOpenBtn = document.querySelector('.menu-open');
 const menuCloseBtn = document.querySelector('.menu-close');
 
 const menuMask = document.querySelector('.menu-mask');
 const menuOverlay = document.querySelector('.menu-overlay');
 
-const homeHeroSection = document.querySelector('.home-hero');
+const header = document.querySelector('.header')
+const heroSection = document.getElementById('hero');
+
+const homeHeroBtn = document.querySelector('.hero-btn');
+const cirlceEl = document.querySelector('.cirlce');
+
 
 menuOpenBtn.addEventListener('click', () => {
-    menuOverlay.classList.add('is-open');
+    menuOverlay.classList.add('isOpen');
     menuMask.classList.add('show');
 })
 
-menuCloseBtn.addEventListener('click', ()=> {
-    menuOverlay.classList.remove('is-open');
+menuCloseBtn.addEventListener('click', () => {
+    menuOverlay.classList.remove('isOpen');
     menuMask.classList.remove('show');
 })
 
-const homeOptions = {
-    threshold: 1,
-}
+menuMask.addEventListener('click', () => {
+    menuOverlay.classList.remove('isOpen');
+    menuMask.classList.remove('show');
+})
 
-const homeHeroSectionObserver = new IntersectionObserver((entries)=>{
-    if(entries[0].isIntersecting == false){
-        console.log('add class');
-        navHeader.classList.add('scrolled')
-    }else{
-        console.log('remove class')
-        navHeader.classList.remove('scrolled')
+homeHeroBtn.addEventListener('mouseover', () => {
+    cirlceEl.classList.add('scale')
+})
+homeHeroBtn.addEventListener('mouseleave', () => {
+    cirlceEl.classList.remove('scale')
+})
+
+const firstSectionObserver = new IntersectionObserver((entries) => {
+    if(!entries[0].isIntersecting){
+        header.classList.add('scrolled')
     }
+    else{
+        header.classList.remove('scrolled')
+    }
+}, {threshold: 1})
 
-},homeOptions)
+firstSectionObserver.observe(heroSection);
 
-homeHeroSectionObserver.observe(homeHeroSection);
-// ====== Hero ====== //
 
-const heroBtn = document.querySelector('.hero-btn');
-const btnCircle = document.querySelector('.circle');
-
-heroBtn.addEventListener('mouseover', () => {
-    btnCircle.classList.add('scale');
-})
-
-heroBtn.addEventListener('mouseleave', () => {
-    btnCircle.classList.remove('scale');
-})

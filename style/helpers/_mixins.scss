@@ -16,3 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@mixin easeIn($time) {
+    transition: all $time ease-in;
+}

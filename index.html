@@ -7,6 +7,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/style/main.css">
     <title>GM Construction</title>
 </head>
@@ -15,7 +16,7 @@
     <!-- ====== NAVIGATION ====== -->
     <!-- ************************ -->
     <header class="header" >
-        <nav class="nav container ">
+        <nav class="nav container">
             <h1 class="logo">GM</h1>
             <div class="menu-open">
                 <div class="line"></div>
@@ -23,40 +24,51 @@
                 <div class="line"></div>
             </div>
             <ul class="navbar">
-                <li class="navbar-item"><a class="navbar-link active-link" href="#">HOME</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#">SERVICES</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#">PROJECTS</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#">ABOUT</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#">CONTACT</a></li>
+                <li class="navbar-item"><a class="navbar-link active-link" href="#">Home</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Services</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Projects</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">About</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="menu-mask"></div>
     <div class="menu-overlay">
         <div class="menu-close">
             <i class="fa-solid fa-xmark"></i>
         </div>
-        <ul class="menu" >
-            <li class="menu-item active-item"><a class="menu-link" href="#">HOME</a></li>
+        <ul class="menu">
+            <li class="menu-item"><a class="menu-link active-mlink" href="#">HOME</a></li>
             <li class="menu-item"><a class="menu-link" href="#">SERVICES</a></li>
             <li class="menu-item"><a class="menu-link" href="#">PROJECTS</a></li>
             <li class="menu-item"><a class="menu-link" href="#">ABOUT</a></li>
             <li class="menu-item"><a class="menu-link" href="#">CONTACT</a></li>
         </ul>
+        <div class="menu-contact">
+            <div>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </div>
+        <button class="menu-btn" >
+            START A PROJECT
+        </button>
     </div>
+    <div class="menu-mask"></div>
     <!-- ****************** -->
     <!-- ====== HERO ====== -->
     <!-- ****************** -->
-    <section class="home-hero" >
+    <section class="home-hero" id="hero" >
         <div class="home-text">
-            <span class="heading">GORDON MITCHELL CONTRACTORS</span>
-            <h1 class="hero-title">BUILDING CONTRACTOR & TIMBER SYSTEMS SPECIALISTS</h1>
-            <div class="hero-btn">
-                <div class="circle">
+            <span class="heading" >GORDON MITCHELL CONTRACTORS</span>
+            <h1 class="hero-title" >BUILDING CONTRACTOR & TIMBER SYSTEMS SPECIALISTS</h1>
+            <button class="hero-btn" >
+                <div class="cirlce">
                     <i class="fa-solid fa-play"></i>
                 </div>
-                <p>WHO WE ARE</p>
-            </div>
+                <p>WHO ARE WE</p>
+            </button>
         </div>
         <div class="swiper hero-swiper">
             <div class="swiper-wrapper">
@@ -68,7 +80,8 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <!-- Script -->
     <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="/script/sliders.js" ></script>

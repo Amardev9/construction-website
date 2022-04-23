@@ -3,193 +3,205 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 25;
     height: 150px;
-    transition: all 0.6s ease;
+    z-index: 20;
+    @include easeIn(0.3s);
     &::before{
-        content: '';
         position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
+        content: '';
         background-color: $white;
         transform: translateY(-100%);
-        transition: all 0.6s ease;
+        @include easeIn(0.3s);
+        z-index: -1;
+    }
+}
+.nav{
+    @include flex(space-between);
+    height: 100%;
+}
+.logo{
+    font-size: 2.5rem;
+    color: $white;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    @include breakpoint(1024px){
+        font-size: 3.5rem;
     }
 }
 
-.nav{
-    @include flex(space-between);
-    padding: 0 2rem;
-}
-
-.logo{
-    font-size: 3rem;
-    color: $white;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-}
-
 .menu-open{
-    width: 35px;
-    cursor: pointer;
-    height: 20px;
     @include flex(space-between);
     flex-direction: column;
     align-items: flex-end;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    @include breakpoint(1024px){
+        display: none;
+    }
     .line{
         width: 100%;
         border-top: 3px solid $white;
     }
 
     .line:nth-child(2){
-        width: 70%;
-    }
-    @include breakpoint(1024px){
-        display: none;
+        width: 25px;
     }
 }
-
-.navbar{
-    display: none;
-    @include breakpoint(1024px){
-        @include flex(flex-start);
-        .navbar-item{
-            list-style-type: none;
-            margin-left: 1.5rem;
-            .navbar-link{
-                position: relative;
-                color: $light-gray;
-                font-weight: 600;
-                letter-spacing: 0.1em;
-                text-decoration: none;
-                
-                &::before{
-                    content: '';
-                    position: absolute;
-                    height: 0px;
-                    width: 2px;
-                    top: -55px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background-color: $white;
-                    transition: all 0.3s ease;
-
-                }
-            }
-            .navbar-link:hover{
-                &::before{
-                    height: 48px;
-                    
-
-                }
-            }
-
-            .active-link{
-                color: $white;
-                &::before{
-                    height: 48px !important;
-                    background-color: $red !important;
-
-                }
-            }
-        }
-    }
-}
-
 .menu-mask{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(12, 16, 23, 0.502);
-    z-index: 20;
-    pointer-events: none;
+    background-color: rgba(12, 16, 23, 0.7);
+    z-index: 40;
     opacity: 0;
-    transition: opacity 0.3s ease-in;
+    visibility: hidden;
+    @include easeIn(0.3s);
+    cursor: pointer;
 }
 
 .menu-overlay{
+    width: 100%;
+    max-width: 400px;
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 100vh;
     background-color: $white;
-    z-index: 30;
-    @include flex(flex-start);
-    max-width: 400px;
+    height: 100vh;
+    z-index: 50;
     transform: translateX(100%);
-    transition: all 0.3s ease-in;
-}
-
-
-.menu{
-    .menu-item{
-        list-style-type: none;
-        margin: 1rem 0;
-        .menu-link{
-            color: black;
-            text-decoration: none;
-            font-size: 1.4rem;
-            margin-left: 70px;
-            letter-spacing: 0.1em;
-        }
-    }
-
-    .active-item{
-        position: relative;
-        .menu-link{
-            color: $red;
-        }
-        &::before{
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: $red;
-        }
-    }
+    @include easeIn(0.3s);
 }
 
 .menu-close{
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 2.5rem;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-.is-open{
-    transform: translateX(0);
+.navbar{
+    display:none;
+    @include breakpoint(1024px){
+        @include flex(flex-start);
+    }
+}
+
+.navbar-item{
+    list-style-type: none;
+    margin: 0 1rem;
+    position: relative;
+    .navbar-link{
+        text-decoration: none;
+        color: $light-gray;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+    }
+
+    .navbar-link::before{
+        content: '';
+        background-color: $white;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 0px;
+        @include easeIn(0.2s)
+    }
+
+    .navbar-link:hover::before{
+        height: 40px;
+    }
+
+    .active-link{
+        color: $white;
+    }
+
+    .active-link::before{
+        background-color: $red;
+        height: 40px;
+    }
+}
+
+.isOpen{
+    transform: translateX(0)
 }
 
 .show{
     opacity: 1;
+    visibility: visible;
 }
 
 .scrolled{
+    height: 100px;
 
     &::before{
-        transform: translateY(0);
+        transform: translateY(0)
     }
-    height: 90px;
 
-    .logo{
-        color: black;
+    .nav{
+        .logo{
+            color: $dark-blue;
+        }
+
+        .menu-open{
+            .line{
+                border-top: 3px solid $dark-blue;
+            }
+        }
     }
+
     .navbar-link{
-        color: #43474E !important;
+        color: $gray;
     }
+
     .active-link{
-        color: $dark-blue !important;
+        color: $dark-blue;
     }
-    .line{
-        border-top: 3px solid $dark-blue;
+}
+
+
+.menu{
+    height: 80%;
+    width: 100%;
+    @include flex(center);
+    flex-direction: column;
+    align-items: flex-start;
+    .menu-item{
+        list-style-type: none;
+        margin: 1rem 0;
+        .menu-link{
+            position: relative;
+            color: $dark-blue;
+            text-decoration: none;
+            font-size: 1.4rem;
+            margin-left: 70px;
+            font-weight: 600;
+            &::before{
+                position: absolute;
+                top: 50%;
+                left: -70px;
+                transform: translateY(-50%);
+                content: '';
+                width: 50px;
+                height: 3px;
+                background-color: $red;
+                display: none;
+            }
+
+        }
+        .active-mlink{
+            color: $red;
+            &::before{
+                display: block;
+            }
+        }
     }
 }

@@ -1,31 +1,76 @@
+button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .hero-btn{
-    margin-top: 1.5rem;
-    cursor: pointer;
     @include flex(flex-start);
-    .circle{
-        margin-right: 0.75rem;
-        @include flex(center);
-        width: 50px;
-        height: 50px;
+    margin-top: 1.5rem;
+    .cirlce{
+        width: 45px;
+        height: 45px;
         background-color: $red;
         border-radius: 50%;
-        transition: all .3s ease-in;
+        @include flex(center);
+        @include easeIn(0.3s);
         @include breakpoint(640px){
-            width: 70px;
-            height: 70px;
+            width: 55px;
+            height: 55px;
+        }
+        @include breakpoint(1024px){
+            width: 60px;
+            height: 60px;
         }
         i{
             color: $white;
             font-size: 24px;
-            margin-left: 4px;
+            margin-left: 5px;
         }
+        margin-right: 0.7rem;
     }
+
     p{
-        font-weight: 600;
-        font-size: 1.1rem;
-        letter-spacing: 0.1em;
         color: $white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
     }
+}
+
+.menu-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $red;
+    color: $white;
+    height: 65px;
+    font-size: .9rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+
+.menu-contact{
+    position: absolute;
+    bottom: 65px;
+    width: 100%;
+    div{
+        width: 50%;
+        border-top: 1px solid $light-gray;
+        text-align: center;
+        color: $gray;
+        padding: 1.5rem;
+        font-size: 24px;
+    }
+    div:nth-child(2){
+        border-left: 1px solid $light-gray;
+    }
+    @include flex(flex-start)
 }
 
 .scale{
