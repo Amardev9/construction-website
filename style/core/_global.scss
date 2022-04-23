@@ -8,6 +8,7 @@
     font-size: 2.25rem;
     color: $white;
     line-height: 1.1;
+    font-weight: 800;
     @include breakpoint(640px){
         font-size: 3rem;
         max-width: 700px;
@@ -37,3 +38,4 @@
         background-color: $red;
     }
 }
+

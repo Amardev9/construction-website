@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  font-family: nudista-web, sans-serif;
+  font-family: 'Manrope', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -22,6 +23,7 @@ body {
   font-size: 2.25rem;
   color: #fefefe;
   line-height: 1.1;
+  font-weight: 800;
 }
 
 @media (min-width: 640px) {
@@ -124,7 +126,7 @@ button {
 
 .hero-btn p {
   color: #fefefe;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
 }
@@ -213,6 +215,7 @@ button {
 }
 
 .logo {
+  font-weight: 800;
   font-size: 2.5rem;
   color: #fefefe;
   letter-spacing: 0.1em;
@@ -221,7 +224,7 @@ button {
 
 @media (min-width: 1024px) {
   .logo {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -329,7 +332,7 @@ button {
   color: #9E9FA2;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .navbar-item .navbar-link::before {
@@ -357,16 +360,6 @@ button {
 .navbar-item .active-link::before {
   background-color: #AB2B30;
   height: 40px;
-}
-
-.isOpen {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.show {
-  opacity: 1;
-  visibility: visible;
 }
 
 .scrolled {
@@ -426,7 +419,7 @@ button {
   text-decoration: none;
   font-size: 1.4rem;
   margin-left: 70px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .menu .menu-item .menu-link::before {
@@ -552,5 +545,63 @@ button {
     -webkit-transform: translateY(-70%);
             transform: translateY(-70%);
   }
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(12, 16, 23, 0.902);
+  z-index: 50;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video-container .gm-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.video-close {
+  width: 60px;
+  height: 60px;
+  color: #fefefe;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 3px solid #fefefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.isOpen {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */
