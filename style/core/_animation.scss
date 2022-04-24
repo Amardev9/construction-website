@@ -2,9 +2,13 @@
     transform: translateX(0)
 }
 
-.show{
+.fade{
     opacity: 1;
     visibility: visible;
+}
+
+.show{
+    display: block;
 }
 
 .preload *{

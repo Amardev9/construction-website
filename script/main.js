@@ -15,6 +15,7 @@ const videoClose = document.querySelector('.video-close');
 
 const videoIframe = document.querySelector('.gm-video');
 const bodyTag = document.querySelector('.body')
+const videoSpinner = document.querySelector('.video-spinner');
 
 
 window.addEventListener('load', () => {
@@ -24,17 +25,17 @@ window.addEventListener('load', () => {
 
 menuOpenBtn.addEventListener('click', () => {
     menuOverlay.classList.add('isOpen');
-    menuMask.classList.add('show');
+    menuMask.classList.add('fade');
 })
 
 menuCloseBtn.addEventListener('click', () => {
     menuOverlay.classList.remove('isOpen');
-    menuMask.classList.remove('show');
+    menuMask.classList.remove('fade');
 })
 
 menuMask.addEventListener('click', () => {
     menuOverlay.classList.remove('isOpen');
-    menuMask.classList.remove('show');
+    menuMask.classList.remove('fade');
 })
 
 homeHeroBtn.addEventListener('mouseover', () => {
@@ -46,12 +47,14 @@ homeHeroBtn.addEventListener('mouseleave', () => {
 })
 
 homeHeroBtn.addEventListener('click', () => {
-    videoContainer.classList.add('show');
+    videoContainer.classList.add('fade');
+    videoSpinner.classList.add('show');
     videoIframe.src = "https://player.vimeo.com/video/371416332?h=0cebcb48c4&autoplay=1";
 })
 
 videoClose.addEventListener('click', () => {
-    videoContainer.classList.remove('show');
+    videoContainer.classList.remove('fade');
+    videoSpinner.classList.remove('show');
     videoIframe.src = "";
 })
 
