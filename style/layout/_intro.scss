@@ -1,0 +1,51 @@
+.intro{
+    background-color: $blue;
+    padding: 5vw;
+    background-image: url(/images/bg-line.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include breakpoint(1024px){
+        @include flex(space-between);
+        padding: 7vw 0;
+    }
+}
+
+.intro-text{
+    max-width: 480px;
+    margin: 2rem auto 0 auto;
+    p{
+        margin: 1.5rem 0 2rem 0;
+        color: $gray;
+        font-weight: 500;
+        line-height: 1.7;
+        letter-spacing: 1px;
+    }
+    @include breakpoint(1024px){
+       width: 60%;
+       order: 1;
+    }
+}
+
+.intro-img{
+    @include breakpoint(1024px){
+        width: 40%;
+        order: 2;
+     }
+}
+
+.intro-link{
+    color: $white;
+    border: 1px solid $white;
+    padding: .8rem 3rem;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    @include easeIn(0.3s);
+    &:hover{
+        background-color: $white;
+        color: $dark-blue;
+        border: 1px solid $dark-blue;
+    }
+}

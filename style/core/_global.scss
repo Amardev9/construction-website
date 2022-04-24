@@ -1,3 +1,6 @@
+img{
+    max-width: 100%;
+}
 .container{
     padding: 0 5vw;
     max-width: 1400px;
@@ -39,3 +42,13 @@
     }
 }
 
+.section-title{
+    color: $white;
+    font-size: 1.5rem;
+    @include breakpoint(640px){
+        font-size: 2rem;
+    }
+    @include breakpoint(1024px){
+        font-size: 2.5rem;
+    }
+}
