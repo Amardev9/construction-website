@@ -1,0 +1,90 @@
+.footer{
+    margin-top: -5px;
+    background-color: $dark-blue;
+    padding: 2.5rem 0;
+    @include breakpoint(1024px){
+        padding: 7rem 0 10rem 0;
+        position: relative;
+    }
+}
+
+.footer-wrap{
+    @include flex(center);
+    flex-direction: column;
+    p{
+        color: $gray;
+        font-size: .9rem;
+        font-weight: 600;
+        @include breakpoint(1024px){
+            position: absolute;
+            bottom: 2rem;
+            left: 31%;
+            transform: translateX(-31%);
+        }
+    }
+    @include breakpoint(640px){
+        align-items: flex-start;
+    }
+
+    @include breakpoint(1024px){
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.footer-logo{
+    color: $gray;
+    font-size: 3rem;
+    font-weight: 800;
+    @include breakpoint(1024px){
+        width: 100px;
+    }
+}
+
+.footer-btn{
+    border: 1px solid $white;
+    color: $white;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2rem 0;
+    @include breakpoint(640px){
+        margin: 4.5rem 0 2rem 0;
+    }
+    @include breakpoint(1024px){
+        margin: 0;
+    }
+}
+.footer-nav{
+    display: none;
+    height: 100px;
+    ul{ 
+        margin: 2rem 2rem 2rem 0;
+        height: 100%;
+        border-left: 1px solid rgba(255,255,255,0.1);
+        li{
+            list-style-type: none;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            width: 120px;
+        }
+    }
+    @include breakpoint(640px){
+        @include flex(flex-start);
+        align-items: flex-start;
+    }
+    @include breakpoint(1024px){
+        width: 50%;
+    }
+}
+
+.footer-link{
+    font-size: 0.8rem;
+    color: $white;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
