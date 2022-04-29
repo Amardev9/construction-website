@@ -522,7 +522,7 @@ button {
 
 .intro {
   background-color: #1B1E25;
-  padding: 5vw;
+  padding: 5vw 5vw 5rem 5vw;
   background-image: url(/images/bg-line.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -746,14 +746,167 @@ button {
   cursor: pointer;
 }
 
+.home-services {
+  background-color: #0C1017;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  -ms-grid-rows: 80vh;
+      grid-template-rows: 80vh;
+}
+
+@media (max-width: 1023px) {
+  .home-services {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    -ms-grid-rows: (50vh)[2];
+        grid-template-rows: repeat(2, 50vh);
+  }
+  .home-service {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-services {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (50vh)[4];
+        grid-template-rows: repeat(4, 50vh);
+  }
+  .home-service {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.home-service {
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-service h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fefefe;
+  font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .home-service h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-service h3 {
+    font-size: 1.4rem;
+  }
+}
+
+.service-bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+@media (min-width: 1024px) {
+  .service-bg {
+    display: block;
+  }
+}
+
+.home-service__link {
+  display: none;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  color: #fefefe;
+  text-decoration: none;
+  -webkit-transform: translate(-50%, 100px);
+          transform: translate(-50%, 100px);
+  border: 1px solid #fefefe;
+  padding: 0.8rem 0;
+  width: 150px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.home-service__link:hover {
+  color: #0C1017;
+  background-color: #fefefe;
+}
+
+@media (min-width: 1024px) {
+  .home-service__link {
+    display: block;
+  }
+}
+
+.bg-mobile {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  height: calc(100% - 40px);
+  background-image: url(/images/our-service-1.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .bg-mobile {
+    display: none;
+  }
+}
+
+.mobile-link {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .mobile-link {
+    display: none;
+  }
+}
+
 .isOpen {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.fade {
+.fade, .fade-up {
   opacity: 1;
   visibility: visible;
+}
+
+.fade-up {
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
 }
 
 .show {

@@ -17,6 +17,10 @@ const videoIframe = document.querySelector('.gm-video');
 const bodyTag = document.querySelector('.body')
 const videoSpinner = document.querySelector('.video-spinner');
 
+const servicesBG = document.querySelectorAll('.service-bg');
+const services = document.querySelectorAll('.home-service');
+const servicesLinks = document.querySelectorAll('.home-service__link');
+
 
 window.addEventListener('load', () => {
     bodyTag.classList.remove('preload');
@@ -57,6 +61,74 @@ videoClose.addEventListener('click', () => {
     videoSpinner.classList.remove('show');
     videoIframe.src = "";
 })
+
+
+services.forEach((serviceEl, index) => {
+    serviceEl.addEventListener('mouseover', () => {
+        switch(index){
+            case 0:
+                servicesBG[0].classList.add('fade');
+                servicesBG[1].classList.remove('fade');
+                servicesBG[2].classList.remove('fade');
+                servicesBG[3].classList.remove('fade');
+
+                servicesLinks[0].classList.add('fade-up');
+                servicesLinks[1].classList.remove('fade-up');
+                servicesLinks[2].classList.remove('fade-up');
+                servicesLinks[3].classList.remove('fade-up');
+            break;
+            case 1:
+                servicesBG[0].classList.remove('fade');
+                servicesBG[1].classList.add('fade');
+                servicesBG[2].classList.remove('fade');
+                servicesBG[3].classList.remove('fade');
+
+                servicesLinks[0].classList.remove('fade-up');
+                servicesLinks[1].classList.add('fade-up');
+                servicesLinks[2].classList.remove('fade-up');
+                servicesLinks[3].classList.remove('fade-up');
+            break;
+            case 2:
+                servicesBG[0].classList.remove('fade');
+                servicesBG[1].classList.remove('fade');
+                servicesBG[2].classList.add('fade');
+                servicesBG[3].classList.remove('fade');
+
+                servicesLinks[0].classList.remove('fade-up');
+                servicesLinks[1].classList.remove('fade-up');
+                servicesLinks[2].classList.add('fade-up');
+                servicesLinks[3].classList.remove('fade-up');
+            break;
+            case 3:
+                servicesBG[0].classList.remove('fade');
+                servicesBG[1].classList.remove('fade');
+                servicesBG[2].classList.remove('fade');
+                servicesBG[3].classList.add('fade');
+
+                servicesLinks[0].classList.remove('fade-up');
+                servicesLinks[1].classList.remove('fade-up');
+                servicesLinks[2].classList.remove('fade-up');
+                servicesLinks[3].classList.add('fade-up');
+            break;
+        }
+    })
+
+    services.forEach(serviceEl => {
+        serviceEl.addEventListener('mouseleave', () => {
+            servicesBG[0].classList.remove('fade');
+            servicesBG[1].classList.remove('fade');
+            servicesBG[2].classList.remove('fade');
+            servicesBG[3].classList.remove('fade');
+
+            servicesLinks[0].classList.remove('fade-up');
+            servicesLinks[1].classList.remove('fade-up');
+            servicesLinks[2].classList.remove('fade-up');
+            servicesLinks[3].classList.remove('fade-up');
+        })
+    });
+});
+
+
 
 const firstSectionObserver = new IntersectionObserver((entries) => {
     if(!entries[0].isIntersecting){
