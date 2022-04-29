@@ -142,5 +142,3 @@ const firstSectionObserver = new IntersectionObserver((entries) => {
 firstSectionObserver.observe(heroSection);
 
 
-
-

@@ -219,3 +219,76 @@
         display: none;
     }
 }
+
+
+// SELECTED PROJECTS
+
+.selected-projects{
+    background-color: #F5F5F6;
+    padding: 5vw 0;
+    span{
+        color: $gray;
+    }
+    article{
+        max-width: 420px;
+        margin: 2rem auto 0 auto;
+        @include breakpoint(1024px){
+            margin: 0;
+            width: 32%;
+            max-width: 100%;
+        }
+    }
+    .project-img{
+        width: 100%;
+        max-height: 250px;
+        @include breakpoint(1024px){
+            max-height: 170px;
+        }
+        @include breakpoint(1200px){
+            max-height: 200px;
+        }
+        @include breakpoint(1400px){
+            max-height: 235px;
+        }
+    }
+    .project-text{
+        margin-top: -1rem;
+        background-color: $white;
+        text-align: center;
+        padding: 2rem 2rem 2.4rem 2rem;
+        .tags{
+            @include flex(center);
+            font-size: .7rem;
+            color: $gray;
+            margin: 1rem 0 1.9rem 0;
+            p{
+                background-color: #F5F5F6;
+                border: 1px solid $light-gray;
+                padding: 0.2rem;
+                border-radius: 2px;
+                margin: 0 .3rem;
+            }
+        }
+        .project-link{
+            color: $dark-blue;
+            border: 1px solid $dark-blue;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: .8rem 3rem;
+            @include easeIn(0.3s);
+            &:hover{
+                color: $white;
+                background-color: $dark-blue;
+
+            }
+        }
+    }
+}
+
+.wrapper-f{
+    @include breakpoint(1024px){
+        @include flex(space-between);
+        
+    }
+}
