@@ -76,3 +76,14 @@ button{
 .scale{
     transform: scale(1.2);
 }
+
+
+.contact-cta-btn{
+    margin-top: 1.5rem;
+    background-color: $red;
+    color: $white;
+    padding: 1rem 2.5rem;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
