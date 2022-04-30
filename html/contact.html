@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="body preload">
+<body class="body preload" >
     <!-- ************************ -->
     <!-- ====== NAVIGATION ====== -->
     <!-- ************************ -->
@@ -27,10 +27,10 @@
             </div>
             <ul class="navbar">
                 <li class="navbar-item"><a class="navbar-link" href="/index.html">Home</a></li>
-                <li class="navbar-item"><a class="navbar-link active-link" href="/html/services.html">Services</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/html/services.html">Services</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#">Projects</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#">About</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="/html/contact.html">Contact</a></li>
+                <li class="navbar-item"><a class="navbar-link active-link" href="/html/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -40,10 +40,10 @@
         </div>
         <ul class="menu">
             <li class="menu-item"><a class="menu-link" href="/index.html">HOME</a></li>
-            <li class="menu-item"><a class="menu-link active-mlink" href="/html/services.html">SERVICES</a></li>
+            <li class="menu-item"><a class="menu-link" href="/html/services.html">SERVICES</a></li>
             <li class="menu-item"><a class="menu-link" href="#">PROJECTS</a></li>
             <li class="menu-item"><a class="menu-link" href="#">ABOUT</a></li>
-            <li class="menu-item"><a class="menu-link" href="#">CONTACT</a></li>
+            <li class="menu-item"><a class="menu-link active-mlink" href="/html/contact.html">CONTACT</a></li>
         </ul>
         <div class="menu-contact">
             <div>
@@ -59,58 +59,72 @@
     </div>
     <div class="menu-mask"></div>
     <!-- ====== Hero ====== -->
-    <div id="hero" class="section-hero" style="background-image: linear-gradient(rgba(12, 16, 23, 0.702),rgba(12, 16, 23, 0.702)) , url(/images/services-hero.jpg);">
-        <h1 class="hero-title">SERVICES</h1>
+    <div id="hero" class="section-hero" style="background-image: linear-gradient(rgba(12, 16, 23, 0.702),rgba(12, 16, 23, 0.702)) , url(/images/our-service-1.jpg);">
+        <h1 class="contact-title" >GET IN TOUCH WITH US ABOUT YOUR NEXT CONSTRUCTION PROJECT</h1>
     </div>
-    <!-- ====== ALL SERVICES ====== -->
 
-    <div class="services-bg">
-        <section class="all-services container">
-            <!-- 1 -->
-            <div class="service-card">
-                <div class="service-card__img" style="background-image: url(/images/our-service-2.jpg);"></div>
-                <div class="service-card__text">
-                    <div class="inner">
-                        <h2>Construction</h2>
-                        <p>Building your dream home is a truly exciting prospect, but it can also be daunting. With extensive experience under our belt, we know a thing or two about the process.</p>
-                        <a href="#">LEARN MORE</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 2 -->
-            <div class="service-card">
-                <div class="service-card__img order-2" style="background-image: url(/images/our-service-1.jpg);"></div>
-                <div class="service-card__text order-1">
-                    <div class="inner">
-                        <h2>TIMBER SYSTEMS</h2>
-                        <p>Make the best of your budget. At Gordon Mitchell Contractors we work with our clients and architects to design and build bespoke timber frames for supply across the UK.</p>
-                        <a href="#">LEARN MORE</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 3 -->
-            <div class="service-card">
-                <div class="service-card__img"style="background-image: url(/images/our-service-4.jpg);"></div>
-                <div class="service-card__text">
-                    <div class="inner">
-                        <h2>PLANT HIRE</h2>
-                        <p>We stock a fleet of high quality, well maintained plant for hire. These machines are hired out with one of our crew of specialised drivers.</p>
-                        <a href="#">LEARN MORE</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 4 -->
-            <div class="service-card">
-                <div class="service-card__img order-2"style="background-image: url(/images/our-service-3.jpg);"></div>
-                <div class="service-card__text order-1">
-                    <div class="inner">
-                        <h2>HAULAGE</h2>
-                        <p>Haulage is about so much more than sitting behind a wheel; it's about knowing how to navigate the land to ensure that shipments are delivered safely and on time.</p>
-                        <a href="#">LEARN MORE</a>
-                    </div>
-                </div>
+    <!-- ====== Contact us ====== -->
+    <div class="blue-bg">
+        <section class="contact container" >
+            <img class="map-img"  src="/images/map.svg" alt="our location">
+            <div class="contact-text">
+                <p>
+                    If you would like to discuss your next construction project or for future employment queries, please do not hesitate to complete the enquiry form (below) or send us an email at <span>enquiries@gmcontractors.co.uk</span>
+                </p>
+                <br>
+                <p>For all Timber Systems enquiries please contact</p>
+                <span>enquiries@gmtimbersystems.co.uk</span>
+                <br><br>
+                <h2>FIND US</h2>
+                <p>Haugh of Sluie <br> Potarch, Banchory <br> Aberdeenshire, AB31 4BA</p>
+                <br>
+                <h2>CALL</h2>
+                <span>01339 884433</span>
+                <a href="#">Find us on google maps</a>
             </div>
         </section>
+    </div>
+    <div class="banner-bg"></div>
+    <div class="contact-bg">
+        <div class="container">
+            <form class="contact-form">
+                <div class="field-container">
+                    <div class="field">
+                        <label for="name">
+                            <p>Name</p>
+                            <input id="name" name="name" type="text">
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label for="email">
+                            <p>Email</p>
+                            <input id="email" name="email" type="email">
+                        </label>
+                    </div>
+                </div>
+                <div class="field-container">
+                    <div class="field">
+                        <label for="phone">
+                            <p>Phone</p>
+                            <input id="phone" name="phone" type="number">
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label for="option">
+                            <p>Select</p>
+                            <input id="option" name="option" type="text">
+                        </label>
+                    </div>
+                </div>
+                <div class="field-msg">
+                    <label for="message">
+                        <p>Message</p>
+                        <textarea name="message" id="message"></textarea>
+                    </label>
+                </div>
+                <button class="contact-cta-btn" type="submit" >SUBMIT</button>
+            </form>
+        </div>
     </div>
     <!-- ====== CONTACT CTA ====== -->
     <section class="contact-cta">

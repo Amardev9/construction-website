@@ -1,0 +1,49 @@
+.contact-form{
+    @include breakpoint(1024px){
+        max-width: 75%;
+        margin: 0 auto;
+    }
+    @include breakpoint(1100px){
+        max-width: 58%;
+    }
+    input{
+        border: 1px solid rgba(158,159,162,0.4);
+        padding: 0 1rem;
+        height: 2.5rem;
+        width: 100%;
+        &:focus{
+            outline: none;
+        }
+    }
+    .field{
+        padding-top: 1.5rem;
+        width: 100%;
+        @include breakpoint(1024px){
+            width: 48%;
+        }
+
+    }
+    .field-msg{
+        padding-top: 1.5rem;
+    }
+    label{
+        p{
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $dark-blue;
+            font-size: 0.9rem;
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.3rem;
+        }
+    }
+    textarea{
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid rgba(158,159,162,0.4);
+        min-height: 160px;
+        padding: 1rem;
+        &:focus{
+            outline: none;
+        }
+    }
+}

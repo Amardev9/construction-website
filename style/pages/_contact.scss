@@ -1,0 +1,101 @@
+.blue-bg{
+    background-color: $blue;
+}
+.contact{
+    padding: 2.5rem 5vw;
+    @include breakpoint(640px){
+        padding: 5rem vw;
+    }
+    @include breakpoint(1024px){
+        padding: 7.5rem 5vw;
+        @include flex(space-between);
+    }
+
+}
+
+.map-img{
+    width: 100%;
+    @include breakpoint(1024px){
+        width: 50%;
+    }
+}
+.contact-title{
+    color: $white;
+    line-height: 1.25;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 2rem;
+    @include breakpoint(640px){
+        font-size: 2.5rem;
+    }
+    @include breakpoint(1024px){
+        font-size: 3rem;
+    }
+}
+
+.contact-text{
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    p{
+        color: #C2C3C5;
+        font-weight: 500;
+        line-height: 1.7;
+    }
+    span{
+        color: $white;
+    }
+    h2{
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        color: $gray;
+    }
+    a{
+        display: block;
+        text-transform: uppercase;
+        color: $white;
+        border: 1px solid $white;
+        width: fit-content;
+        text-decoration: none;
+        font-size: .8rem;
+        font-weight: 700;
+        padding: .8rem 2.5rem;
+        margin-top: 2rem;
+        @include easeIn(0.3s);
+        &:hover{
+            background-color: $white;
+            color: $dark-blue;
+        }
+    }
+    @include breakpoint(1024px){
+        width: 45%;
+        font-size: 1rem;
+        h2{
+            font-size: 1rem;
+        }
+    }
+}
+
+.banner-bg{
+    background-image: url(/images/gm_contact.jpg);
+    @include bgImageStyle();
+    height: 50vw;
+    max-height: 80vh;
+}
+
+.contact-bg{
+    background-color: #F5F5F6;
+    padding: 5rem 0;
+    @include breakpoint(1024px){
+        padding: 7.5rem 0;
+    }
+}
+
+.field-container{
+    @include breakpoint(1024px){
+        @include flex(space-between);
+    }
+}
