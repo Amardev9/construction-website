@@ -52,3 +52,12 @@ img{
         font-size: 2.5rem;
     }
 }
+
+.section-hero{
+    @include bgImageStyle();
+    @include flex(center);
+    min-height: 50vh;
+    @include breakpoint(1024px){
+        padding: 12.5rem 5vw 12.5rem 5vw;
+    }
+}
