@@ -87,18 +87,19 @@
     <div class="banner-bg"></div>
     <div class="contact-bg">
         <div class="container">
-            <form class="contact-form">
+            <div class="form-success" >Thanks for contacting us! We will be in touch with you shortly.</div>
+            <form  autocomplete="off" class="contact-form">
                 <div class="field-container">
                     <div class="field">
                         <label for="name">
                             <p>Name</p>
-                            <input id="name" name="name" type="text">
+                            <input autocomplete="off" aria-required="true" id="name" name="name" type="text">
                         </label>
                     </div>
                     <div class="field">
                         <label for="email">
                             <p>Email</p>
-                            <input id="email" name="email" type="email">
+                            <input autocomplete="off" aria-required="true" id="email" name="email" type="email">
                         </label>
                     </div>
                 </div>
@@ -106,13 +107,20 @@
                     <div class="field">
                         <label for="phone">
                             <p>Phone</p>
-                            <input id="phone" name="phone" type="number">
+                            <input autocomplete="off" aria-required="true" id="phone" name="phone" type="tel">
                         </label>
                     </div>
                     <div class="field">
-                        <label for="option">
+                        <label for="subject">
                             <p>Select</p>
-                            <input id="option" name="option" type="text">
+                            <select aria-required="true" name="subject" id="subject">
+                                <option value="Please select...">Please select...</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Timber Systems">Timber Systems</option>
+                                <option value="Plant Hire">Plant Hire</option>
+                                <option value="Haulage">Haulage</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </label>
                     </div>
                 </div>
@@ -122,7 +130,7 @@
                         <textarea name="message" id="message"></textarea>
                     </label>
                 </div>
-                <button class="contact-cta-btn" type="submit" >SUBMIT</button>
+                <button class="form-btn contact-cta-btn" type="submit" >SUBMIT</button>
             </form>
         </div>
     </div>
@@ -157,6 +165,7 @@
     </footer>
     <!-- Script -->
     <script defer src="/script/navigation.js" ></script>
+    <script defer src="/script/pages/contact-form.js" ></script>
     <script defer src="/script/main.js" ></script>
 </body>
 </html>

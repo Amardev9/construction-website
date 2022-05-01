@@ -87,6 +87,7 @@
 }
 
 .contact-bg{
+    position: relative;
     background-color: #F5F5F6;
     padding: 5rem 0;
     @include breakpoint(1024px){
@@ -98,4 +99,12 @@
     @include breakpoint(1024px){
         @include flex(space-between);
     }
+}
+
+.form-success{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
 }

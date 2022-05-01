@@ -12,7 +12,12 @@
 }
 
 .show{
-    display: block;
+    display: block !important;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
 }
 
 .preload *{
